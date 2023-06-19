@@ -3,6 +3,8 @@ import { IFeatureModel } from '../models/feature.model';
 import { IsBoolean, IsEmail, IsString } from 'class-validator';
 
 export class FeatureEntity implements IFeatureModel {
+  // Ejemplo de una entidad con TypeOrm
+
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
