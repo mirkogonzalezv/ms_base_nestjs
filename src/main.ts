@@ -13,7 +13,11 @@ async function bootstrap() {
   app.use(helmet());
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new AllExceptionFilter(configService));
+
+  /// set api global prefix if is necessary
   app.setGlobalPrefix('', { exclude: ['health'] });
+
+  /// set enable versioning if is necessary
   app.enableVersioning({
     defaultVersion: '1',
     type: VersioningType.URI,
