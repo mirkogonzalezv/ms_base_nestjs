@@ -26,6 +26,6 @@ export const TypeOrmConfig = (entities: [any]) => {
     }),
     dataSourceFactory: async (options) => {
       return new DataSource(options).initialize();
-    }
+    },
   });
 };
